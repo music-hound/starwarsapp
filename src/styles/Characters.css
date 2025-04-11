@@ -1,0 +1,69 @@
+h3 {
+    margin: 0;
+}
+.characterTitle {
+    font-size: 35px;
+    color: #000;
+}
+.charactersContainer {
+    margin-top: 93px;
+    width: 100%;
+    max-width: 1150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.characterList {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    row-gap: 45px;
+    column-gap: 35px;
+    margin-bottom: 100px;
+}
+.characterListItem {
+    background-color: #f0f0f0;
+    padding: 12px 25px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.characterListItem:hover {
+    transform: scale(1.02);
+    box-shadow: 8px 8px 8px rgba(33, 33, 33, 0.1);
+}
+.characterProps {
+    display: flex;
+    gap: 13px;
+}
+.characterTags {
+    display: flex;
+    gap: 13px;
+}
+.circleCard {
+    width: 38px;
+    height: 38px;
+    box-shadow: inset 0 0 0 3px rgba(33, 33, 33, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.characterTagItem {
+    box-sizing: border-box;
+    box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 17px;
+    font-size: 12px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #07D6F2;
+}
