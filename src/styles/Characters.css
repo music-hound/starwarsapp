@@ -6,7 +6,7 @@ h3 {
     color: #000;
 }
 .charactersContainer {
-    margin-top: 93px;
+    padding: 93px 200px;
     width: 100%;
     max-width: 1150px;
     display: flex;
@@ -66,4 +66,16 @@ h3 {
     height: 16px;
     border-radius: 8px;
     background-color: #07D6F2;
+}
+
+@media (max-width: 1200px) {
+    .charactersContainer {
+        padding: 93px 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .charactersContainer {
+        padding: 93px 15px;
+    }
 }

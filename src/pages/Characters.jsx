@@ -78,7 +78,7 @@ const Characters = ()=>{
             </h1>
 
             <div style={{ display: 'flex', gap:'20px', alignItems: 'center', alignSelf:'flex-start' }}>
-                <span>color eye</span>
+                <span style={{flexShrink: '0'}}>color eye</span>
                 <Filter
                 options={options}
                 value={filterSelect}

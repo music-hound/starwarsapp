@@ -11,6 +11,14 @@ header {
     background-color: #1F2A63;
     box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
   }
+  .container {
+    width: 100%;
+    max-width: 1150px;
+    padding: 0px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .navButton {
     position: relative;
     display: inline-block;
@@ -31,3 +39,15 @@ header {
     transition: 0.3s ease;
     width: 80%;
   }
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+  .container {
+      padding: 15px;
+  }
+}
