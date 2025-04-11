@@ -10,6 +10,7 @@ import { addPeople, nextPage } from '../state/peopleSlice';
 import { filterChange } from '../state/filterSlice';
 import peopleFilter from '../utils/peopleFilter';
 import Popup from '../components/Popup';
+import Loader from '../components/Loader';
 
 const options = [
     { label: "All", value: "" },
@@ -94,7 +95,7 @@ const Characters = ()=>{
                 }
             </div>
 
-            { isFetching && <div>Loading...</div> }
+            { isFetching && <Loader isFetching={isFetching}/> }
             { isError && <div>Error: {isError.error}</div> }
 
             

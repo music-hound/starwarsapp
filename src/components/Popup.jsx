@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { useGetPersonByIdQuery } from '../state/swApi';
 import CardProp from './CardProp';
 import { getBgColor } from './CharacterListItem';
+import Loader from './Loader';
 
 const Popup = ({ isOpen, onClose }) => {
 
@@ -73,7 +74,7 @@ const Popup = ({ isOpen, onClose }) => {
 </div>
             
 
-          { isFetching && <div>Loading...</div> }
+          { isFetching && <Loader isFetching={isFetching}/> }
           { isError && <div>Error: {isError.error}</div> }
 
         </div>
