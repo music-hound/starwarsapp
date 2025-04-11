@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import { addPeople, nextPage } from '../state/peopleSlice';
 import { filterChange } from '../state/filterSlice';
 import peopleFilter from '../utils/peopleFilter';
+import Popup from '../components/Popup';
 
 const options = [
     { label: "All", value: "" },
@@ -19,11 +20,16 @@ const options = [
   ];
 
 const Characters = ()=>{
+    
     const dispatch = useDispatch();
+
+    const [ isOpenPopup, setIsOpenPopup ] = useState(false);
     const [ filteredPeople, setFilteredPeople ] = useState([]);
+
     const filterSelect = useSelector((state) => state.reducer.filterReducer.filterSelect);
     const isWookie = useSelector(state => state.reducer.language.isWookie);
     const { people, page } = useSelector(state => state.reducer.people)
+
     const { data, isFetching, isError } = useGetPeopleQuery(page, isWookie)
 
     useEffect(() => {
@@ -53,9 +59,15 @@ const Characters = ()=>{
             dispatch(nextPage())
         }
     }, [isFetching, filteredPeople, dispatch])
+
+    function handlePopupOpen() {
+        setIsOpenPopup(true);
+    }
     
     return (
         <div className={'charactersContainer'}>
+
+            <Popup isOpen={isOpenPopup} onClose={() => setIsOpenPopup(false)} />
 
             <Language />
             <WookieButton />            
@@ -77,7 +89,7 @@ const Characters = ()=>{
                 {
                     filteredPeople.map(
                         (item) => (
-                            <CharacterListItem key={item.url} character={item} />
+                            <CharacterListItem key={item.url} character={item} handlePopupOpen={handlePopupOpen} />
                     ))
                 }
             </div>

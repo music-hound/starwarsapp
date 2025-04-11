@@ -1,6 +1,7 @@
 import '../styles/Characters.css';
 
 const CardProp = ( { type, param } )=>{
+    if (!param) { return }
     if (param === 'unknown') { return }
     if (param.includes(',')) { param = param.replace(',', '.') }
     return (

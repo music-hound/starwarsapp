@@ -1,0 +1,26 @@
+.button {
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    width: 231px;
+    height: 66px;
+    background-color: #FFC107;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+    box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease-in-out;
+}
+.button:hover {
+    color: inherit;
+    box-shadow: inset 0px -13px 0px rgba(0, 0, 0, 0.18);
+}
+.button:visited {
+    color: inherit;
+}
+.button:active {
+    scale: 0.95;
+}

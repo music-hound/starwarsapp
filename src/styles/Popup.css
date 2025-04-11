@@ -1,0 +1,76 @@
+.popupOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .popupContent {
+    background: linear-gradient(180deg, #17002F 0%, #1F2A63 100%);
+    padding: 20px;
+    border-radius: 16px;
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+  }
+  
+  .popupClose {
+    font-family: 'Karla', sans-serif;
+    position: absolute;
+    top: -100px;
+    right: 0px;
+    background: none;
+    border: none;
+    font-size: 100px;
+    cursor: pointer;
+  }
+  .detailsName {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #fdfdfd;
+  }
+  .detailsParam {
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    gap: 8px;
+  }
+  .detailsParamValue {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .detailsContainer {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+  }
+  .detailsImage {
+    padding: 20px;
+    width: 50%;
+    height: inherit;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    gap: 10px;
+  }
+  .popupDetail {
+    align-items: center;
+    padding: 10px;
+    width: 83px;
+    height: 70px;
+  }
+  .detailsParamContainer {
+    margin-top: 75px;
+    display: flex;
+    align-self: flex-end;
+    gap: 20px;
+  }

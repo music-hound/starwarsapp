@@ -1,7 +1,9 @@
 import '../styles/Characters.css';
 import CardProp from './CardProp';
+import { useDispatch } from 'react-redux';
+import { characterDetails } from '../state/characterSlice';
 
-function getBgColor( gender ) {
+export function getBgColor( gender ) {
     switch (gender) {
         case 'male':
             return '#73D677';
@@ -12,12 +14,20 @@ function getBgColor( gender ) {
     }
 }
 
-const CharacterListItem = ( {character} )=>{
+const CharacterListItem = ( { character, handlePopupOpen } )=>{
+    const dispatch = useDispatch();
     return (
-        <div className={'characterListItem'} style={{wordBreak: 'break-all'}}>
+        <div
+        onClick={() => {
+            const id = character.url.split('/').at(-2);
+            dispatch(characterDetails(id));
+            handlePopupOpen()
+        }}
+        className={'characterListItem'}
+        >
             <h3>{character.name}</h3>
 
-            <div style={{width:'50px',height:'50px', borderRadius:'50%',backgroundColor:`${character.eye_color}`}}></div>
+            {/* <div style={{width:'50px',height:'50px', borderRadius:'50%',backgroundColor:`${character.eye_color}`}}></div> */}
 
             <div className='characterProps'>
                 <CardProp type='height' param={character.height} />
