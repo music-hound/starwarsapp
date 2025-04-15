@@ -5,7 +5,7 @@ const HomePage = ()=>{
     return (
         <div className={'homePagebg'}>
             <div className="homePage">
-                <div>
+                <div className='mainText'>
                     <h1>
                         <b>Find</b> all your favorite <b>character</b>
                     </h1>
@@ -14,7 +14,7 @@ const HomePage = ()=>{
                     </h2>
                     <Button to={'/characters'}>See more...</Button>
                 </div>
-                <img style={{width:'720px', transform:'translateX(80px)'}} src={`${import.meta.env.BASE_URL}/yoda_clouds.png`} alt="Yoda_clouds" />
+                <img className='yoda_img' src={`${import.meta.env.BASE_URL}/yoda_clouds.png`} alt="Yoda_clouds" />
             </div>
         </div>
     )

@@ -8,7 +8,7 @@ const Header = ( )=>{
     return (
         <header>
             <div className="container">
-                <img style={{width:'100px'}} src={`${import.meta.env.BASE_URL}/logo.png`} alt="LogoStarWars" />
+                <img className="headerLogo" src={`${import.meta.env.BASE_URL}/logo.png`} alt="LogoStarWars" />
                 <nav>
                     <ul>
                         <li>
